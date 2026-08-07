@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CSA Maseno Welcome Guide
 
-## Getting Started
+A dedicated **Next.js brochure and welcome guide** for the **Catholic Students’ Association (CSA), Maseno University**, deployed at **https://csa.stanneschaplaincy.com**.
 
-First, run the development server:
+This project is a standalone frontend application that introduces first-year students to **St. Anne’s Catholic Chaplaincy** and the **Catholic Students’ Association (CSA)** through a visually rich, SEO-friendly landing experience. It serves as the digital welcome booklet for new students joining the chaplaincy community.
+
+---
+
+## Project purpose
+
+The primary goal of this project is to provide a dedicated onboarding experience for incoming students without affecting the main chaplaincy website.
+
+The welcome guide includes information about:
+
+* St. Anne’s Catholic Chaplaincy
+* The Catholic Students’ Association (CSA)
+* Prayer houses
+* Groups and movements
+* Mass schedule
+* Signature events
+* Welcome week
+* Contact information
+* Campus location
+* Student resources
+
+The project is intentionally designed as a **lightweight, high-performance brochure site** with a strong emphasis on **SEO, accessibility, and mobile experience**.
+
+---
+
+## Technology stack
+
+This project is built with:
+
+* **Next.js 16**
+* **React 19**
+* **TypeScript**
+* **Tailwind CSS v4**
+
+The application uses the **Next.js App Router** and is primarily composed of **Server Components** to maximize search engine visibility and performance.
+
+Interactive functionality is isolated into small client components where necessary (such as scroll animations and the placeholder signup form).
+
+---
+
+## Position in the St. Anne’s ecosystem
+
+This project is one part of the broader **St. Anne’s Chaplaincy digital platform**.
+
+### Domain architecture
+
+```text
+stanneschaplaincy.com
+│
+├── Main chaplaincy website (Next.js)
+│
+├── csa.stanneschaplaincy.com
+│   └── CSA Welcome Guide (this project)
+│
+└── 
+```
+
+### Responsibilities
+
+#### Main website (`stanneschaplaincy.com`)
+
+* Public chaplaincy website
+* Events
+* Prayer resources
+* Catholic Ministries
+* Leadership
+* General chaplaincy content
+
+#### CSA Welcome Guide (`csa.stanneschaplaincy.com`)
+
+* First-year onboarding
+* CSA brochure
+* Welcome ceremony information
+* Community introduction
+* Student-focused content
+
+---
+
+## Development
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build for production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Start the production server
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is deployed on **Vercel** and mapped to the custom subdomain:
 
-## Deploy on Vercel
+```text
+https://csa.stanneschaplaincy.com
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The deployment pipeline is independent of the main chaplaincy website.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Design principles
+
+This project follows several important engineering principles:
+
+* **SEO-first rendering**
+* **Server Components by default**
+* **Progressive enhancement**
+* **Minimal client-side JavaScript**
+* **Reusable UI sections**
+* **Independent deployment architecture**
+
+---
+
+## Author
+
+Designed and developed by **Jeremiah Wambua** as part of the **St. Anne’s Catholic Chaplaincy, Maseno University** digital platform.
+
+This repository represents the **CSA onboarding and welcome experience** within the larger St. Anne’s Chaplaincy ecosystem.
