@@ -10,6 +10,7 @@ export function JoinCsaForm() {
     phone: "",
     course: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const field = (name: keyof typeof values) => ({
     id: name,
@@ -19,17 +20,30 @@ export function JoinCsaForm() {
       setValues((v) => ({ ...v, [name]: e.target.value })),
   });
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setStatus("sending");
 
-    // Placeholder only.
-    console.log("Form submitted:", values);
+    const formData = new FormData(e.currentTarget);
 
-    setValues({
-      full_name: "",
-      phone: "",
-      course: "",
-    });
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/jeremywambua106@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setValues({ full_name: "", phone: "", course: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   const inputClass =
@@ -43,6 +57,13 @@ export function JoinCsaForm() {
       onSubmit={onSubmit}
       className="rounded-3xl border border-border bg-card p-6 shadow-sm"
     >
+      {/* FormSubmit hidden fields */}
+      <input type="hidden" name="_subject" value="New CSA Join Request – St. Anne's Chaplaincy" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      {/* Optional: redirect after success (leave empty if you handle UI yourself) */}
+      {/* <input type="hidden" name="_next" value="https://www.stanneschaplaincy.com/thank-you" /> */}
+
       <div>
         <label htmlFor="full_name" className={labelClass}>
           Full name
@@ -52,6 +73,7 @@ export function JoinCsaForm() {
           type="text"
           autoComplete="name"
           placeholder="Mary Anne Achieng"
+          required
           className={inputClass}
         />
       </div>
@@ -65,6 +87,7 @@ export function JoinCsaForm() {
           type="tel"
           autoComplete="tel"
           placeholder="+254 712 345 678"
+          required
           className={inputClass}
         />
       </div>
@@ -77,20 +100,33 @@ export function JoinCsaForm() {
           {...field("course")}
           type="text"
           placeholder="BSc. Computer Science"
+          required
           className={inputClass}
         />
       </div>
 
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+        disabled={status === "sending"}
+        className="mt-6 w-full rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Count me in
+        {status === "sending" ? "Sending..." : "Count me in"}
       </button>
 
+      {status === "success" && (
+        <p className="mt-4 text-center text-sm font-medium text-leaf">
+          Thank you! We’ve received your details and will be in touch soon.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="mt-4 text-center text-sm font-medium text-brick">
+          Something went wrong. Please try again or join the WhatsApp group instead.
+        </p>
+      )}
+
       <p className="mt-3 text-center text-xs text-muted-foreground">
-        Your details will be connected to the St. Anne's Chaplaincy system during
-        the main website integration.
+        Your details will be sent directly to the CSA leadership.
       </p>
     </form>
   );

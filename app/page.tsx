@@ -94,21 +94,84 @@ function SectionTag({
   );
 }
 
+
+
 const PRAYER_HOUSES = [
-  { name: "St. Augustine", note: "Seek, and you shall find", color: "bg-primary" },
-  { name: "St. Faustina", note: "Jesus, I trust in You", color: "bg-sky" },
-  { name: "St. Rose of Lima", note: "A house of quiet devotion", color: "bg-plum" },
-  { name: "St. Agnes", note: "Purity, courage, and joy", color: "bg-brick" },
-  { name: "St. Thomas", note: "Faith that asks and finds", color: "bg-teal" },
-  { name: "St. Peter", note: "Built on the Rock", color: "bg-leaf" },
+  {
+    name: "St. Agnes",
+    note: "Saturday 5pm - Chaplaincy",
+    color: "bg-brick",
+    communities: [
+      "St. Elizabeth",
+      "St. Getrude",
+      "St. Kizito",
+      "St. Andrew",
+    ],
+  },
+  {
+    name: "St. Augustine",
+    note: "Saturday 5pm Underground Chapel (Chaplaincy)",
+    color: "bg-primary",
+    communities: [
+      "St. Charity",
+      "St. Rita",
+      "St. Francis",
+    ],
+  },
+  {
+    name: "St. Faustina",
+    note: "Sunday 5pm - Chaplaincy",
+    color: "bg-sky",
+    communities: [
+      "St. JohnBosco",
+      "St. Joseph",
+      "St. Cecilia",
+      "St. Maria Goretti",
+      "St. Michael",
+      "St. Monica",
+    ],
+  },
+  {
+    name: "St. Peter",
+    note: "Sunday 5pm - Urban Room",
+    color: "bg-leaf",
+    communities: [
+      "St. Stephen",
+      "St. Scholastica",
+      "St. Theresa of Avila",
+      "St. Charles Lwanga",
+    ],
+  },
+  {
+    name: "St. Rose of Lima",
+    note: "Sunday 5pm - Chaplaincy",
+    color: "bg-plum",
+    communities: [
+      "St. Christopher",
+      "St. George",
+      "St. Josephine Bakhita",
+    ],
+  },
+  {
+    name: "St. Thomas Aquinas",
+    note: "Sunday 5pm - Chaplaincy",
+    color: "bg-teal",
+    communities: [
+      "St. Ambrose",
+      "St. Raphael",
+      "St. Veronica",
+    ],
+  },
 ];
+
+
 
 const GROUPS = [
   { name: "Prolife", note: "Dignity of every human life", color: "bg-brick" },
   { name: "CJPD", note: "Justice, Peace & Development", color: "bg-teal" },
   { name: "NMCS", note: "National Movement of Catholic Students", color: "bg-primary" },
   { name: "Legion of Mary", note: "Prayer & service under Mary", color: "bg-sky" },
-  { name: "Ogopa Mungu", note: "Mission & witness on campus", color: "bg-plum" },
+  { name: "Ogopa Mungu", note: "Liturgical Dancers", color: "bg-plum" },
   { name: "Choir", note: "Leading worship in song", color: "bg-sun" },
   { name: "Divine Mercy", note: "The Chaplet & Mercy Sunday", color: "bg-leaf" },
   { name: "Praise & Worship", note: "Worship and adoration", color: "bg-gold" },
@@ -118,21 +181,21 @@ const EVENTS = [
   {
     title: "CSA Hikes & Fun Day",
     note: "Trails, games, and laughter as one family.",
-    img: "/assets/hike.jpg",
+    img: "https://res.cloudinary.com/dfdegqwp6/image/upload/v1775742087/group_gallery/2026/04/09/WhatsApp_Image_2026-04-09_at_4.01.57_PM_1_i7p83f.jpg",
     color: "bg-leaf",
     tag: "Outdoors",
   },
   {
     title: "Cultural Week",
     note: "Celebrating the many heritages that make up CSA.",
-    img: "/assets/culture.jpg",
+    img: "https://res.cloudinary.com/dfdegqwp6/image/upload/v1786858929/group_gallery/2026/08/16/culture_rnqetj.jpg",
     color: "bg-plum",
     tag: "Heritage",
   },
   {
     title: "Charity & Outreach",
     note: "Visiting children's homes and giving back locally.",
-    img: "/assets/charity.jpg",
+    img: "https://res.cloudinary.com/dfdegqwp6/image/upload/v1786858902/group_gallery/2026/08/16/WhatsApp_Image_2026-08-16_at_8.39.55_AM_qpmkvk.jpg",
     color: "bg-brick",
     tag: "Service",
   },
@@ -146,7 +209,7 @@ const EVENTS = [
   {
     title: "Spiritual Retreats",
     note: "Stepping away to grow closer to God.",
-    img: "/assets/retreat.jpg",
+    img: "/assets/vph.jpg",
     color: "bg-teal",
     tag: "Silence",
   },
@@ -230,7 +293,8 @@ export default function HomePage() {
       {/* HERO — full bleed poster cover */}
       <section className="relative isolate overflow-hidden bg-ink">
         <Image
-          src="/assets/hero.jpg"
+          src="https://res.cloudinary.com/dfdegqwp6/image/upload/v1777055149/group_gallery/2026/04/24/IMG_9541_kls2ws.jpg"
+          loading="eager"
           alt="Catholic students welcoming first-years outside St. Anne's Chaplaincy at Maseno University"
           width={1280}
           height={1600}
@@ -242,7 +306,7 @@ export default function HomePage() {
             style={{ animationDelay: "80ms" }}
           >
             <Icon path={icons.compass} className="h-4 w-4" />
-            0°00' — the university on the Equator
+            0°00' — the versity at the Equator
           </p>
           <h1
             className="mt-6 max-w-3xl animate-float-up font-display text-6xl leading-[0.98] font-semibold text-cream md:text-8xl"
@@ -327,7 +391,7 @@ export default function HomePage() {
             </ul>
           </div>
           <Image
-            src= "/assets/community.jpg"
+            src= "https://res.cloudinary.com/dfdegqwp6/image/upload/v1775735304/group_gallery/2026/04/09/WhatsApp_Image_2026-04-09_at_2.44.31_PM_l1ykhl.jpg"
             alt="Students of the Catholic Students' Association praying together on campus"
             width={1200}
             height={1400}
@@ -339,6 +403,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      
       {/* 02 — PRAYER HOUSES as a colourful numbered list */}
       <section className="mx-auto max-w-6xl px-5 py-10">
         <SectionTag num="02" color="bg-brick">
@@ -354,18 +419,37 @@ export default function HomePage() {
               key={h.name}
               data-reveal
               data-reveal-delay={i * 80}
-              className="group flex items-center gap-4 border-b border-border px-5 py-4 transition-colors duration-300 last:border-b-0 hover:bg-secondary sm:gap-6 sm:px-7"
+              className="group border-b border-border px-5 py-5 transition-colors duration-300 last:border-b-0 hover:bg-secondary sm:px-7"
             >
-              <span
-                className={`${h.color} flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl font-mono text-sm font-bold text-cream transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div className="min-w-0 flex-1">
-                <h3 className="font-display text-xl font-semibold text-foreground">{h.name}</h3>
-                <p className="text-sm text-muted-foreground">{h.note}</p>
+              <div className="flex items-center gap-4 sm:gap-6">
+                <span
+                  className={`${h.color} flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl font-mono text-sm font-bold text-cream transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-display text-xl font-semibold text-foreground">
+                    {h.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{h.note}</p>
+                </div>
+                <Icon path={icons.cross} className="hidden h-5 w-5 text-border sm:block" />
               </div>
-              <Icon path={icons.cross} className="hidden h-5 w-5 text-border sm:block" />
+
+              {/* Small Christian Communities under this prayer house */}
+              <ul className="mt-4 ml-16 grid gap-1.5 sm:ml-[4.5rem] sm:grid-cols-2">
+                {h.communities.map((c) => (
+                  <li
+                    key={c}
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                  >
+                    <span
+                      className={`${h.color} mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full`}
+                    />
+                    {c}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ol>
@@ -426,7 +510,7 @@ export default function HomePage() {
       </section>
 
       {/* 05 — EVENTS as picture list rows */}
-      <section className="mx-auto max-w-6xl px-5 py-14">
+      {/* <section className="mx-auto max-w-6xl px-5 py-14">
         <SectionTag num="05" color="bg-plum">
           Life at CSA
         </SectionTag>
@@ -448,6 +532,7 @@ export default function HomePage() {
                 alt={e.title}
                 width={1024}
                 height={768}
+                sizes="(max-width: 640px) 100vw, 50vw"
                 loading="lazy"
                 className="h-56 w-full object-cover sm:h-full"
               />
@@ -465,7 +550,53 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
+      {/* 05 — EVENTS as picture list rows */}
+<section className="mx-auto max-w-6xl px-5 py-14">
+  <SectionTag num="05" color="bg-plum">
+    Life at CSA
+  </SectionTag>
+  <h2 className="mt-6 font-display text-4xl font-semibold leading-tight text-foreground">
+    Our signature moments
+  </h2>
+
+  <div className="mt-8 space-y-4">
+    {EVENTS.map((e, i) => (
+      <article
+        key={e.title}
+        data-reveal
+        className={`zoom-img lift grid overflow-hidden rounded-3xl border border-border bg-card sm:grid-cols-2 sm:h-72 ${
+          i % 2 === 1 ? "reveal-right sm:[&>div:first-child]:order-2" : "reveal-left"
+        }`}
+      >
+        {/* Image container – fixed height on all screens */}
+        <div className="relative h-56 w-full sm:h-full">
+          <Image
+            src={e.img}
+            alt={e.title}
+            fill
+            sizes="(max-width: 640px) 100vw, 50vw"
+            loading="lazy"
+            className="object-cover"
+          />
+        </div>
+
+        {/* Text content */}
+        <div className="flex flex-col justify-center p-7">
+          <span
+            className={`${e.color} inline-flex w-fit rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-cream`}
+          >
+            {e.tag}
+          </span>
+          <h3 className="mt-4 font-display text-2xl font-semibold text-foreground">
+            {e.title}
+          </h3>
+          <p className="mt-2 leading-relaxed text-muted-foreground">{e.note}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
 
       {/* 06 — T-SHIRT + CEREMONY */}
       <section className="mx-auto max-w-6xl px-5 pb-14">
@@ -495,7 +626,7 @@ export default function HomePage() {
                 Ksh 800
               </p>
               <p className="mt-3 text-sm text-muted-foreground">
-                Available from your prayer house leaders and during welcome week.
+                Available from the Executive leadership and during welcome week.
               </p>
             </div>
           </article>
@@ -622,7 +753,7 @@ export default function HomePage() {
               map below and come find us for Mass, a prayer house, or a chat.
             </p>
             <div className="mt-6 overflow-hidden rounded-3xl border border-border shadow-sm">
-              <iframe
+              {/* <iframe
                 title="St. Anne's Catholic Chaplaincy location"
                 src={`https://www.google.com/maps/embed/v1/place?key=${
                   process.env.NEXT_PUBLIC_GOOGLE_MAPS_BROWSER_KEY
@@ -634,7 +765,18 @@ export default function HomePage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="block bg-secondary"
-              />
+              /> */}
+              <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8182763092873!2d34.596192821512474!3d-0.008512447724042497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa9f7db000001%3A0x458077a06358c7ec!2sSt.%20Anne's%20Chaplaincy%20Maseno!5e0!3m2!1sen!2ske!4v1786857235530!5m2!1sen!2ske" 
+               width="100%"
+                height="360"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="block bg-secondary">
+
+               </iframe>
             </div>
           </div>
 
@@ -652,8 +794,8 @@ export default function HomePage() {
             </p>
             <div className="mt-6 space-y-4">
               {[
-                { role: "CSA Chair", name: "Chairperson", phone: "+254 712 345 678", color: "bg-primary" },
-                { role: "CSA Secretary", name: "Secretary", phone: "+254 723 456 789", color: "bg-sun" },
+                { role: "CSA Chair", name: "Chairperson - Vincent Otiende", phone: "+254 712 345 678", color: "bg-primary" },
+                { role: "CSA Secretary", name: "Secretary - Celestine Mwongeli", phone: "+254 723 456 789", color: "bg-sun" },
               ].map((c) => (
                 <a
                   key={c.role}
@@ -728,6 +870,31 @@ export default function HomePage() {
           Kisumu.
         </div>
       </footer>
+
+
+      {/* Floating WhatsApp button */}
+      <a
+        href={WHATSAPP_GROUP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join CSA Maseno WhatsApp Group"
+        className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-transform duration-300 hover:scale-110 hover:shadow-2xl animate-whatsapp-vibrate sm:bottom-8 sm:right-8 sm:h-20 sm:w-20"
+      >
+        {/* WhatsApp icon */}
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-9 w-9 sm:h-11 sm:w-11"
+          aria-hidden="true"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+
+        {/* Optional small “Join” label on hover / larger screens */}
+        <span className="absolute -top-10 right-0 hidden whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-cream shadow-md sm:group-hover:block">
+          Join WhatsApp
+        </span>
+      </a>
     </div>
   );
 }
