@@ -794,8 +794,8 @@ export default function HomePage() {
             </p>
             <div className="mt-6 space-y-4">
               {[
-                { role: "CSA Chair", name: "Chairperson - Vincent Otiende", phone: "+254 712 345 678", color: "bg-primary" },
-                { role: "CSA Secretary", name: "Secretary - Celestine Mwongeli", phone: "+254 723 456 789", color: "bg-sun" },
+                { role: "CSA Chair", name: "Chairperson - Vincent Otiende", phone: "+254 769 028 829", color: "bg-primary" },
+                { role: "CSA Secretary", name: "Secretary - Celestine Mwongeli", phone: "+254 759 556 624", color: "bg-sun" },
               ].map((c) => (
                 <a
                   key={c.role}
