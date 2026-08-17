@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/Jcn7lM0eHuWEAJzYHliWeO";
+export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/DOlwWMTtRHqBI9NKkti47X";
 
 export function JoinCsaForm() {
   const [values, setValues] = useState({
