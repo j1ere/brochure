@@ -27,7 +27,7 @@ export function JoinCsaForm() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/jeremywambua106@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/otiendevincent39@gmail.com", {
         method: "POST",
         body: formData,
         headers: {
