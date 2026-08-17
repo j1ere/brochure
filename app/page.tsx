@@ -856,7 +856,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="mt-5 text-xs text-muted-foreground">
-              Numbers are placeholders — tap the card to call once the real contacts are updated.
+              Numbers are placeholders — tap the card to call.
             </p>
           </div>
         </div>
