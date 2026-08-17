@@ -265,6 +265,40 @@ export default function HomePage() {
 
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
+  <Ribbon />
+
+  <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+    <span className="flex items-center gap-2 font-display text-base font-semibold text-foreground">
+      <Image
+        src="https://res.cloudinary.com/dfdegqwp6/image/upload/v1786945731/WhatsApp_Image_2026-08-17_at_8.42.11_AM_rthtlc.jpg"
+        alt="St. Anne's Catholic Chaplaincy CSA Maseno logo"
+        width={32}
+        height={32}
+        className="h-8 w-8 object-contain"
+      />
+
+      St. Anne's · CSA Maseno
+    </span>
+
+    <div className="flex items-center gap-2">
+      <a
+        href="#join"
+        className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-sm font-semibold text-gold-foreground transition-transform hover:-translate-y-0.5"
+      >
+        Join CSA
+      </a>
+
+      <a
+        href={SITE}
+        className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
+      >
+        Visit our website
+        <Icon path={icons.external} className="h-4 w-4" />
+      </a>
+    </div>
+  </div>
+</header>
+      {/* <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
         <Ribbon />
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
           <span className="flex items-center gap-2 font-display text-base font-semibold text-foreground">
@@ -287,7 +321,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-      </header>
+      </header> */}
 
 
       {/* HERO — full bleed poster cover */}
