@@ -293,7 +293,7 @@ export default function HomePage() {
       {/* HERO — full bleed poster cover */}
       <section className="relative isolate overflow-hidden bg-ink">
         <Image
-          src="https://res.cloudinary.com/dfdegqwp6/image/upload/v1777055149/group_gallery/2026/04/24/IMG_9541_kls2ws.jpg"
+          src="https://res.cloudinary.com/dfdegqwp6/image/upload/v1786942060/WhatsApp_Image_2026-08-16_at_10.23.05_PM_gqlaop.jpg"
           loading="eager"
           alt="Catholic students welcoming first-years outside St. Anne's Chaplaincy at Maseno University"
           width={1280}
