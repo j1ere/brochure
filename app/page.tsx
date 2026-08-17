@@ -324,61 +324,72 @@ export default function HomePage() {
       </header> */}
 
 
-      {/* HERO — full bleed poster cover */}
-      <section className="relative isolate overflow-hidden bg-ink">
-        <Image
-          src="https://res.cloudinary.com/dfdegqwp6/image/upload/v1786942060/WhatsApp_Image_2026-08-16_at_10.23.05_PM_gqlaop.jpg"
-          loading="eager"
-          alt="Catholic students welcoming first-years outside St. Anne's Chaplaincy at Maseno University"
-          width={1280}
-          height={1600}
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
-        />
-        <div className="relative mx-auto max-w-6xl px-5 py-24 md:py-32">
-          <p
-            className="flex animate-float-up items-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-gold"
-            style={{ animationDelay: "80ms" }}
-          >
-            <Icon path={icons.compass} className="h-4 w-4" />
-            0°00' — the versity at the Equator
-          </p>
-          <h1
-            className="mt-6 max-w-3xl animate-float-up font-display text-6xl leading-[0.98] font-semibold text-cream md:text-8xl"
-            style={{ animationDelay: "180ms" }}
-          >
-            Karibu sana,
-            <br />
-            <span className="italic text-gold">Class of 2026/2027.</span>
-          </h1>
-          <p
-            className="mt-6 max-w-xl animate-float-up text-lg leading-relaxed text-cream/80"
-            style={{ animationDelay: "320ms" }}
-          >
-            A little picture-brochure of your new home: St. Anne's Catholic Chaplaincy and the
-            Catholic Students' Association at Maseno University.
-          </p>
-          <div
-            className="mt-8 flex animate-float-up flex-wrap gap-3"
-            style={{ animationDelay: "440ms" }}
-          >
-            <a
-              href="#welcome-ceremony"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-gold-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              Join the First-Years' Welcome
-              <Icon path={icons.arrow} className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-            <a
-              href="#groups"
-              className="inline-flex items-center gap-2 rounded-full border border-cream/40 px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-1 hover:bg-cream/10"
-            >
-              Meet CSA
-            </a>
-          </div>
+   {/* HERO — full bleed poster cover */}
+<section className="relative isolate overflow-hidden bg-ink">
+  <Image
+    src="https://res.cloudinary.com/dfdegqwp6/image/upload/v1786942060/WhatsApp_Image_2026-08-16_at_10.23.05_PM_gqlaop.jpg"
+    loading="eager"
+    alt="Catholic students welcoming first-years outside St. Anne's Chaplaincy at Maseno University"
+    width={1280}
+    height={1600}
+    className="absolute inset-0 h-full w-full object-cover opacity-45"
+  />
 
-        </div>
-        <Ribbon />
-      </section>
+  <div className="relative mx-auto max-w-6xl px-5 py-24 text-center md:py-32">
+
+    <p
+      className="flex animate-float-up items-center justify-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-gold"
+      style={{ animationDelay: "80ms" }}
+    >
+      <Icon path={icons.compass} className="h-4 w-4" />
+      0°00' — the versity at the Equator
+    </p>
+
+    <h1
+      className="mx-auto mt-6 max-w-4xl animate-float-up font-display text-6xl leading-[0.98] font-semibold text-cream md:text-8xl"
+      style={{ animationDelay: "180ms" }}
+    >
+      Karibu sana,
+      <br />
+      <span className="italic text-gold">
+        Class of 2026/2027.
+      </span>
+    </h1>
+
+    <p
+      className="mx-auto mt-6 max-w-2xl animate-float-up text-lg leading-relaxed text-cream/80"
+      style={{ animationDelay: "320ms" }}
+    >
+      A little picture-brochure of your new home: St. Anne's Catholic
+      Chaplaincy and the Catholic Students' Association at Maseno University.
+    </p>
+
+    <div
+      className="mt-8 flex animate-float-up flex-wrap justify-center gap-3"
+      style={{ animationDelay: "440ms" }}
+    >
+      <a
+        href="#welcome-ceremony"
+        className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-gold-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      >
+        Join the First-Years' Welcome
+        <Icon
+          path={icons.arrow}
+          className="h-4 w-4 transition-transform duration-300"
+        />
+      </a>
+
+      <a
+        href="#groups"
+        className="inline-flex items-center gap-2 rounded-full border border-cream/40 px-6 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-1 hover:bg-cream/10"
+      >
+        Meet CSA
+      </a>
+    </div>
+  </div>
+
+  <Ribbon />
+</section>
 
       {/* STATS — colour blocks */}
       <section className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-5 py-10 md:grid-cols-4">
