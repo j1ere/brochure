@@ -202,7 +202,7 @@ const EVENTS = [
   {
     title: "St. Anne's Feast Day",
     note: "Our patronal feast — a day of celebration.",
-    img: "/assets/feast.jpg",
+    img: "https://res.cloudinary.com/dfdegqwp6/image/upload/v1786944555/WhatsApp_Image_2026-08-17_at_8.28.13_AM_p6mhrm.jpg",
     color: "bg-gold",
     tag: "Patronal",
   },
